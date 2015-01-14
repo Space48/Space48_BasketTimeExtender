@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Space48_Basket_Time_Extender extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Space48
+ * @package        Space48_Basket_Time_Extender
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Space48_BasketTimeExtender>
+            <version>0.1.0</version>
+        </Space48_BasketTimeExtender>
+    </modules>
+    <frontend>
+        <!--Frontend events-->
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <check_cookie_exists>
+                        <type>singleton</type>
+                        <class>Space48_BasketTimeExtender_Model_Observer</class>
+                        <method>controllerFrontInitBefore</method>
+                    </check_cookie_exists>
+                </observers>
+            </controller_action_predispatch>
+            <checkout_cart_save_after>
+                <observers>
+                    <init_cookie>
+                        <type>singleton</type>
+                        <class>Space48_BasketTimeExtender_Model_Observer</class>
+                        <method>initCookie</method>
+                    </init_cookie>
+                </observers>
+            </checkout_cart_save_after>
+            <customer_login>
+                <observers>
+                    <unset_session_variable>
+                        <type>singleton</type>
+                        <class>Space48_BasketTimeExtender_Model_Observer</class>
+                        <method>cleanupOnLogin</method>
+                    </unset_session_variable>
+                </observers>
+            </customer_login>
+        </events>
+    </frontend>
+    <global>
+        <models>
+            <space48_baskettimeextender>
+                <class>Space48_BasketTimeExtender_Model</class>
+            </space48_baskettimeextender>
+        </models>
+        <helpers>
+            <space48_baskettimeextender>
+                <class>Space48_BasketTimeExtender_Helper</class>
+            </space48_baskettimeextender>
+        </helpers>
+        <resources>
+            <space48_baskettimeextender_setup>
+                <setup>
+                    <module>Space48_BasketTimeExtender</module>
+                    <class>Space48_BasketTimeExtender_Model_Resource_Setup</class>
+                </setup>
+            </space48_baskettimeextender_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <space48_baskettimeextender>
+                                            <title>Space48_Baskettimeextender - All</title>
+                                        </space48_baskettimeextender>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config> 

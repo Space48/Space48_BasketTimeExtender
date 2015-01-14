@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--    /**
+        * Space48_Basket_Time_Extender extension
+        *
+        * NOTICE OF LICENSE
+        *
+        * This source file is subject to the MIT License
+        * that is bundled with this package in the file LICENSE.txt.
+        * It is also available through the world-wide-web at this URL:
+        * http://opensource.org/licenses/mit-license.php
+        *
+        * @category       Space48
+        * @package        Space48_Basket_Time_Extender
+        * @copyright      Copyright (c) 2015
+        * @license        http://opensource.org/licenses/mit-license.php MIT License
+        */-->
+<config>
+    <tabs>
+        <bbsystemconf translate="label" module="space48_baskettimeextender">
+            <label>Space 48</label>
+            <sort_order>10</sort_order>
+        </bbsystemconf>
+    </tabs>
+
+    <sections>
+        <space48_baskettimeextender translate="label" module="space48_baskettimeextender">
+            <label>Basket Time Extender</label>
+            <tab>bbsystemconf</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="space48_baskettimeextender">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <comment><![CDATA[Enable or disable basket time extender globally.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <cookietime translate="label">
+                            <label>Cookie Life</label>
+                            <comment><![CDATA[The cookie life in seconds]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cookietime>
+                    </fields>
+                </general>
+            </groups>
+        </space48_baskettimeextender>
+    </sections>
+</config>
