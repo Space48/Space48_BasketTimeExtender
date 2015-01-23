@@ -14,8 +14,8 @@ Requirements
 
 Compatibility
 -------------
-- Magento >= 1.4
-- 
+Magento >= 1.4
+
 Tested
 -------------
 Enterprise 1.13
