@@ -15,6 +15,10 @@ Requirements
 Compatibility
 -------------
 - Magento >= 1.4
+- 
+Tested
+-------------
+Enterprise 1.13
 
 Installation Instructions
 -------------------------
