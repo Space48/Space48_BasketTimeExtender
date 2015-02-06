@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <placeholders>
+        <cart_sidebar>
+            <block>checkout/cart_sidebar</block>
+            <placeholder>CART_SIDEBAR</placeholder>
+            <container>Space48_BasketTimeExtender_Model_Container_Sidebar_Cart</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </cart_sidebar>
+    </placeholders>
+</config>
